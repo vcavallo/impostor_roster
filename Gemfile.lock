@@ -90,6 +90,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
+    pg (0.17.1)
     polyglot (0.3.3)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -174,6 +175,7 @@ DEPENDENCIES
   guard-livereload
   jbuilder (~> 1.2)
   jquery-rails
+  pg
   rails (= 4.0.2)
   rspec-rails
   sass-rails (~> 4.0.0)
