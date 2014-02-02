@@ -1,5 +1,9 @@
-<h1>All Posts</h1>
+<div class="container">
+<h1>Impostor Roster</h1>
 
+<h3>Suffering from <%= link_to "Impostor Syndrome", "http://en.wikipedia.org/wiki/Impostor_syndrome" %>? <small>You're not alone...</small></h3>
+<p>All the people posting below feel like impostors at times, too!</br>
+So read these posts, <%= link_to "add one of your own", :new_post %> and get over it!</p>
   <ul>
   <% @posts.each do |post| %>
     <li>Someone in the <%= post.field %> field for <%= post.months_experience %> months still can't do <%= post.inability %>.</li>
@@ -8,4 +12,6 @@
 
   <%= link_to "Are you crappy at something in your line of work?", :new_post %></br>
   </br>
+
   <%= link_to "What is this?", :about %>
+</div>
