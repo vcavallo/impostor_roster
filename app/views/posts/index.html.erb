@@ -6,7 +6,7 @@
 So read these posts, <%= link_to "add one of your own", :new_post %> and get over it!</p>
   <ul>
   <% @posts.each do |post| %>
-    <li>Someone in the <%= post.field %> field for <%= post.months_experience %> months still can't do <%= post.inability %>.</li>
+    <li>Someone in the <%= link_to "#{post.category.name}", category_path(post.category) %> field for <%= post.months_experience %> months still can't do <%= post.inability %>.</li>
   <% end %>
   </ul>
 

@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Some things that other people involved in <%= @category.name %> felt shaky about:</h3>
+
+  <ul>
+  <% @category_posts.each do |post| %>
+    <li>
+      <%= post.inability %>, <%= post.months_experience %> months later.
+    </li>
+  <% end %>
+  </ul>
+
+</div>
