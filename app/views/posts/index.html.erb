@@ -1,0 +1,11 @@
+<h1>All Posts</h1>
+
+  <ul>
+  <% @posts.each do |post| %>
+    <li>Someone in the <%= post.field %> field for <%= post.months_experience %> months still can't do <%= post.inability %>.</li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Are you crappy at something in your line of work?", :new_post %>
+
+  <%= link_to "What is this?", :about %>

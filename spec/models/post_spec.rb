@@ -9,10 +9,10 @@ describe Post do
       expect(post).to be_valid
     end
   end
-  
+
   describe "#field" do
     it { should respond_to(:field) }
-  
+
     context "when it is 3 characters long" do
       it "is valid" do
         post.field = "a" * 3
@@ -27,61 +27,61 @@ describe Post do
       end
     end
 
-    context "when field is blank" do
+    context "when it is blank" do
       it "is invalid" do
         post.field = nil
         expect(post).to be_invalid
       end
     end
-
-  end
-
-
-
-  it "should have a field" do
-    post.field = nil
-    expect(post).to be_invalid
-  end
-
-  it "should have months of experience" do
-   expect(post).to respond_to(:months_experience)
-  end
-
-  it "should have an inability" do
-    expect(post).to respond_to(:inability)
-  end
-
-  describe "#field" do
-    it "should not be an empty string" do
-      post.field = ""
-      expect(post).to be_invalid
-    end
-
-    it "should be a string" do
-      expect(post.field).to be_a(String)
-    end
   end
 
   describe "#months_experience" do
-    it "should not be blank" do
-      post.months_experience = nil
-      expect(post).to be_valid
+    it { should respond_to(:months_experience) }
+
+    context "when it is at least 1" do
+      it "is valid" do
+        post.months_experience = 2
+        expect(post).to be_valid
+      end
     end
 
-    it "should be an integer" do
-      expect(post.months_experience).to be_a(Integer)
+    context "when it is blank" do
+      it "is invalid" do
+        post.months_experience = nil
+        expect(post).to be_invalid
+      end
+    end
+
+    context "when it is zero" do
+      it "is invalid" do
+        post.months_experience = 0
+        expect(post).to be_invalid
+      end
+    end
+
+    context "when it is a string" do
+      it "is invalid" do
+        post.months_experience = "a string"
+        expect(post).to be_invalid
+      end
     end
   end
 
   describe "#inability" do
-    it "should not be blank" do
-      expect(post.inability).to_not be(nil)
-      expect(post.inability).to_not be("")
+    it { should respond_to(:inability) }
+
+    context "when it is at least 1 character long" do
+      it "is valid" do
+        post.inability = "C"
+        expect(post).to be_valid
+      end
     end
 
-    it "should be a string" do
-      expect(post.inability).to be_a(String)
+    context "when it is blank" do
+      it "is invalid" do
+        post.inability = nil
+        expect(post).to be_invalid
+      end
     end
   end
-
 end
