@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-posts = Post.create(
-  [
-    { field: "Ruby", months_experience: 12, inability: "RSpec Testing" },
-    { field: "Landscape Architecture", months_experience: 24, inability: "Large shrubs. Well, any shrubs, really..." },
-    { field: "Medicine", months_experience: 50, inability: "Circulatory system." }
-  ]
-)
+ruby_category = Category.create(name: "Ruby")
+medicine_category = Category.create(name: "Medicine")
+journalism_category = Category.create(name: "Journlism")
+
+rspec_post = Post.create(months_experience: 12, inability: "RSpec testing", category: ruby_category)
+meta_post = Post.create(months_experience: 25, inability: "metaprogramming", category: ruby_category)
+circ_post = Post.create(months_experience: 55, inability: "circulatory system stuff", category: medicine_category)

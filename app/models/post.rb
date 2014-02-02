@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
-  validates :field, presence: true
-  validates :field, :length => { minimum:  3 }
+  belongs_to :category
+
+ # validates :field, presence: true
+ # validates :field, :length => { minimum:  3 }
 
   validates :months_experience, numericality: true
   validates :months_experience, presence: true
