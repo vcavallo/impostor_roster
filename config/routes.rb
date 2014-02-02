@@ -11,6 +11,7 @@ ImpostorRoster::Application.routes.draw do
   get 'posts' => 'posts#index', :as => :posts
   get 'posts/new' => 'posts#new', :as => :new_post
   post 'posts' => 'posts#create'
+  get 'about' => 'pages#about', :as => :about
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
