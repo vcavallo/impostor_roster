@@ -10,11 +10,13 @@ class PostsController < ApplicationController
   end
 
   def create
+    found_or_created_category = Category.find_or_create_by(name: post_params[:category].downcase)
+
     @post = Post.create(
       inability: post_params[:inability].downcase,
       months_experience: post_params[:months_experience].to_i,
-      category: Category.find_or_create_by(name: post_params[:category].downcase)
-      )
+      category: found_or_created_category
+    )
     @posts = Post.all
     render "index"
   end
