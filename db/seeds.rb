@@ -8,7 +8,6 @@
 
 ruby_category = Category.create(name: "ruby")
 medicine_category = Category.create(name: "medicine")
-journalism_category = Category.create(name: "journlism")
 
 rspec_post = Post.create(months_experience: 12, inability: "RSpec testing", category: ruby_category)
 meta_post = Post.create(months_experience: 25, inability: "metaprogramming", category: ruby_category)
