@@ -1,12 +1,11 @@
-<%= form_for @post do |f| %>
-  <%= f.label "Field:" %>
-  <%= f.text_field :field %></br>
-  <%= f.label "Months of Experience:" %>
-  <%= f.text_field :months_experience %></br>
-  <%= f.label "Thing you are bad at:" %>
-  <%= f.text_field :inability %></br>
-  <%= f.submit %></br>
-  <%= link_to "Go Back", posts_path %>
-<% end %>
+<%= form_tag '/posts' %>
 
+<%= label_tag "Field you are in:" %>
+<%= text_field_tag 'post[category]' %>
+<%= label_tag "Months of Experience:" %>
+<%= text_field_tag 'post[months_experience]' %></br>
+<%= label_tag "Thing you are bad at:" %>
+<%= text_field_tag 'post[inability]' %></br>
+<%= button_tag "create post" %></br>
+<%= link_to "Go Back", posts_path %>
 

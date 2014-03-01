@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ruby_category = Category.create(name: "Ruby")
-medicine_category = Category.create(name: "Medicine")
-journalism_category = Category.create(name: "Journlism")
+ruby_category = Category.create(name: "ruby")
+medicine_category = Category.create(name: "medicine")
+journalism_category = Category.create(name: "journlism")
 
 rspec_post = Post.create(months_experience: 12, inability: "RSpec testing", category: ruby_category)
 meta_post = Post.create(months_experience: 25, inability: "metaprogramming", category: ruby_category)
