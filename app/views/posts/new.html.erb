@@ -1,7 +1,7 @@
 <%= form_tag '/posts' %>
 
 <%= label_tag "Field you are in:" %>
-<%= text_field_tag 'post[category]' %>
+<%= text_field_tag 'post[category]', @field %>
 <%= label_tag "Months of Experience:" %>
 <%= text_field_tag 'post[months_experience]' %></br>
 <%= label_tag "Thing you are bad at:" %>

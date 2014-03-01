@@ -8,6 +8,7 @@
     </li>
   <% end %>
   </ul>
-  <%= link_to "View all Categories", categories_path %></br>
-  <%= link_to "View all Posts", posts_path %>
+  <p>Do you have issues with <%= @category.name.titleize %>? <%= link_to "Tell the world about it", new_post_path(category: @category.name)  %>!</p>
+  <p><%= link_to "View all Categories", categories_path %></br>
+  <%= link_to "View all Posts", posts_path %></p>
 </div>

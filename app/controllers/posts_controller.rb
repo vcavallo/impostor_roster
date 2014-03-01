@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @field = params[:category] if params[:category]
   end
 
   def create
@@ -23,7 +24,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :category,
       :months_experience,
-      :inability
+      :inability,
+      :field
     )
   end
 end
