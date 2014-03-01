@@ -6,11 +6,13 @@
 So read these posts, <%= link_to "add one of your own", :new_post %> and get over it!</p>
   <ul>
   <% @posts.each do |post| %>
-    <li>Someone in the <%= link_to "#{post.category.name}", category_path(post.category) %> field for <%= post.months_experience %> months still can't do <%= post.inability %>.</li>
+    <li>Someone in the <%= link_to "#{post.category.name.titleize}", category_path(post.category) %> field for <strong><%= post.months_experience %> months</strong> still can't do <%= post.inability %>.</li>
   <% end %>
   </ul>
+  <%= link_to "View all Categories", categories_path %></br>
+  </br>
 
-  <%= link_to "Are you crappy at something in your line of work?", :new_post %></br>
+  <p>Are you crappy at something in your line of work? <%= link_to "Join the party!", :new_post %></p>
   </br>
 
   <%= link_to "What is this?", :about %>

@@ -4,8 +4,9 @@
   <ul>
     <% @categories.each do |category| %>
       <li>
-      <%= link_to "#{category.name}", category_path(category) %>
+      <%= link_to "#{category.name.titleize}", category_path(category) %>
       </li>
     <% end %>
   </ul>
+  <%= link_to "View all Posts", posts_path %>
 </div>

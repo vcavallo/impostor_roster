@@ -9,9 +9,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    #TODO: look up category. 
-    # If it exists, use it. If it doesn't, create it.
-    # found_or_created_category = 
     @post = Post.create(
       inability: post_params[:inability].downcase,
       months_experience: post_params[:months_experience].to_i,

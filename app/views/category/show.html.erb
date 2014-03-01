@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Some things that other people involved in <%= @category.name %> felt shaky about:</h3>
+  <h3>Some things that other people involved in <%= @category.name.titleize %> felt shaky about:</h3>
 
   <ul>
   <% @category_posts.each do |post| %>
@@ -8,5 +8,6 @@
     </li>
   <% end %>
   </ul>
-
+  <%= link_to "View all Categories", categories_path %></br>
+  <%= link_to "View all Posts", posts_path %>
 </div>
