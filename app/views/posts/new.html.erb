@@ -1,11 +1,12 @@
-<%= form_tag '/posts' %>
+<div class="container">
+  <%= form_tag '/posts' %>
 
-<%= label_tag "Field you are in:" %>
-<%= text_field_tag 'post[category]', @field %>
-<%= label_tag "Months of Experience:" %>
-<%= text_field_tag 'post[months_experience]' %></br>
-<%= label_tag "Thing you are bad at:" %>
-<%= text_field_tag 'post[inability]' %></br>
-<%= button_tag "create post" %></br>
-<%= link_to "Go Back", posts_path %>
-
+  <%= label_tag "Field you are in:" %>
+  <%= text_field_tag 'post[category]', @field %>
+  <%= label_tag "Months of Experience:" %>
+  <%= text_field_tag 'post[months_experience]' %></br>
+  <%= label_tag "Thing you are bad at:" %>
+  <%= text_field_tag 'post[inability]' %></br>
+  <%= button_tag "create post" %></br>
+  <%= link_to "Go Back", posts_path %>
+</div>
