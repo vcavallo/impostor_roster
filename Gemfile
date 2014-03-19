@@ -38,6 +38,7 @@ end
 
 group :test, :development do
   gem 'sqlite3'
+  gem 'capybara'
 end
 
 group :test do

@@ -1,9 +1,10 @@
 <div class="container">
 <h1>Impostor Roster</h1>
 
-<h3>Suffering from <%= link_to "Impostor Syndrome", "http://en.wikipedia.org/wiki/Impostor_syndrome" %>? <small>You're not alone...</small></h3>
+<h2>Suffering from <%= link_to "Impostor Syndrome", "http://en.wikipedia.org/wiki/Impostor_syndrome" %>? <small>You're not alone...</small></h2>
 <p>All the people posting below feel like impostors at times, too!</br>
 So read these posts, <%= link_to "add one of your own", :new_post %> and get over it!</p>
+<h3>All Posts</h3>
   <ul>
   <% @posts.each do |post| %>
     <li>Someone in the <strong><%= link_to "#{post.category.name.titleize}", category_path(post.category) %></strong> field for <strong><%= post.months_experience %> months</strong> still can't do <em><%= post.inability %></em>.</li>
