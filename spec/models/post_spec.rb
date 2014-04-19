@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Post do
 
-  let(:post) { FactoryGirl.build(:first_post) }
+  let(:post) { FactoryGirl.build(:ruby_post) }
 
   describe "Factory" do
     it "is valid" do
@@ -10,30 +10,6 @@ describe Post do
     end
   end
 
-  describe "#field" do
-    it { should respond_to(:field) }
-
-    context "when it is 3 characters long" do
-      it "is valid" do
-        post.field = "a" * 3
-        expect(post).to be_valid
-      end
-    end
-
-    context "when it is 2 characters long" do
-      it "is invalid" do
-        post.field = "a" * 2
-        expect(post).to be_invalid
-      end
-    end
-
-    context "when it is blank" do
-      it "is invalid" do
-        post.field = nil
-        expect(post).to be_invalid
-      end
-    end
-  end
 
   describe "#months_experience" do
     it { should respond_to(:months_experience) }
