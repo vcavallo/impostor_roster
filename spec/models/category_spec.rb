@@ -31,6 +31,10 @@ describe Category do
     end
   end
 
+  describe "has a human-friendly #slug" do
+    it { should respond_to(:name) }
+  end
+
   describe "associations" do
     let(:post) { FactoryGirl.create(:ruby_post) }
     it "has many posts" do
