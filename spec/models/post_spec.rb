@@ -11,53 +11,66 @@ describe Post do
   end
 
 
-  describe "#months_experience" do
+  describe "has #months_experience" do
     it { should respond_to(:months_experience) }
 
-    context "when it is at least 1" do
-      it "is valid" do
-        post.months_experience = 2
-        expect(post).to be_valid
+    describe "validations" do
+      context "when it is at least 1" do
+        it "is valid" do
+          post.months_experience = 2
+          expect(post).to be_valid
+        end
       end
-    end
 
-    context "when it is blank" do
-      it "is invalid" do
-        post.months_experience = nil
-        expect(post).to be_invalid
+      context "when it is blank" do
+        it "is invalid" do
+          post.months_experience = nil
+          expect(post).to be_invalid
+        end
       end
-    end
 
-    context "when it is zero" do
-      it "is invalid" do
-        post.months_experience = 0
-        expect(post).to be_invalid
+      context "when it is zero" do
+        it "is invalid" do
+          post.months_experience = 0
+          expect(post).to be_invalid
+        end
       end
-    end
 
-    context "when it is a string" do
-      it "is invalid" do
-        post.months_experience = "a string"
-        expect(post).to be_invalid
+      context "when it is a string" do
+        it "is invalid" do
+          post.months_experience = "a string"
+          expect(post).to be_invalid
+        end
       end
     end
   end
 
-  describe "#inability" do
+  describe "has #inability" do
     it { should respond_to(:inability) }
 
-    context "when it is at least 1 character long" do
-      it "is valid" do
-        post.inability = "C"
-        expect(post).to be_valid
+    describe "validations" do
+      context "when it is at least 1 character long" do
+        it "is valid" do
+          post.inability = "C"
+          expect(post).to be_valid
+        end
       end
-    end
 
-    context "when it is blank" do
-      it "is invalid" do
-        post.inability = nil
-        expect(post).to be_invalid
+      context "when it is blank" do
+        it "is invalid" do
+          post.inability = nil
+          expect(post).to be_invalid
+        end
       end
     end
   end
+
+  describe "associations" do
+    let!(:category) { FactoryGirl.create(:ruby_category) }
+
+    it "belongs to a category" do
+      expect(post.category).to eq(category)
+    end
+  end
+
 end

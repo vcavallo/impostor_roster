@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 feature "Viewing categories" do
-  let(:ruby) { FactoryGirl.build(:ruby_category) }
+  let(:ruby_category) { FactoryGirl.create(:ruby_category) }
+  let!(:ruby_post) { FactoryGirl.create(:ruby_post) }
+  let!(:med_post) { FactoryGirl.create(:medical_post) }
 
   scenario "Visitor goes to categories list page" do
     visit categories_path
@@ -9,7 +11,13 @@ feature "Viewing categories" do
   end
 
   scenario "Visitor selects a single category" do
-    visit category_path(ruby)
+    visit category_path(ruby_category)
     expect(page).to have_content("involved in Ruby")
+  end
+
+  scenario "Visitor sees links to the posts in that category" do
+    visit category_path(ruby_category)
+    expect(page).to have_content(ruby_post.inability)
+    expect(page).not_to have_content(med_post.inability)
   end
 end
