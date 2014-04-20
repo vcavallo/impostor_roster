@@ -4,4 +4,7 @@ class Category < ActiveRecord::Base
 
   validates :name, :length => { minimum: 3 }
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
 end
