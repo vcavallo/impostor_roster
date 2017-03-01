@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ImpostorRoster::Application.config.secret_key_base = '15434a7b7da4e1b674c8f0a958a748a38c30a8d95d1c3e5c60c655bb7217e4dbf51dd88d6dd0c3789bd352859fb49dbc286e97d638429078ca6b92f5e6550e24'
+
+ImpostorRoster::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
