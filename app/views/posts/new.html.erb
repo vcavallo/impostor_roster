@@ -1,14 +1,26 @@
-<div class="container">
+<div class="container new-submission">
   <h2>We all feel like impostors sometimes.</h2>
   <h3>Help us feel better by contributing:</h3>
-  <%= form_tag '/posts' do %>
-    <%= label_tag "Field you are in:" %>
-    <%= text_field_tag 'post[category]', @field %>
-    <%= label_tag "Months of Experience:" %>
-    <%= text_field_tag 'post[months_experience]' %></br>
-    <%= label_tag "Thing you are bad at:" %>
-    <%= text_field_tag 'post[inability]' %></br>
-    <%= button_tag "Admit it!" %>
-  <% end %>
-  <%= link_to "Go Back", posts_path %>
+
+  <div>
+    <%= form_tag '/posts' do %>
+      <div class="form-group">
+        <%= label_tag "Field you are in:" %>
+        <%= text_field_tag 'post[category]', @field, class: "form-control", placeholder: 'Programming' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag "Months of Experience:" %>
+        <%= text_field_tag 'post[months_experience]', nil, class: "form-control", placeholder: '120' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag "Thing you are bad at:" %>
+        <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'whiteboard interviews' %>
+      </div>
+        <%= button_tag "Admit it!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <nav>
+    <%= link_to "Go Back", posts_path %>
+  </nav>
 </div>
