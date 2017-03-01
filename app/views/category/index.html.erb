@@ -1,12 +1,10 @@
-<div class="container">
-  <h1>All Categories</h1>
+<h1>All Categories</h1>
 
-  <ul>
-    <% @categories.each do |category| %>
-      <li>
-      <%= link_to "#{category.name.titleize}", category_path(category) %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "View all Posts", posts_path %>
-</div>
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+    <%= link_to "#{category.name.titleize}", category_path(category) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "View all Posts", posts_path %>

@@ -10,15 +10,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    found_or_created_category = Category.find_or_create_by(name: post_params[:category].downcase)
+    category = Category.find_or_initialize_by(name: post_params[:category].downcase)
 
-    @post = Post.create(
+    @post = Post.new(
       inability: post_params[:inability].downcase,
       months_experience: post_params[:months_experience].to_i,
-      category: found_or_created_category
+      category: category
     )
-    @posts = Post.all
-    render "index"
+
+    if @post.save
+      @posts = Post.all
+      flash.now[:success] = "Your post has been created!"
+      render "index"
+    else
+      flash.now[:danger] = @post.errors.full_messages.to_sentence
+      render 'new'
+    end
   end
 
   private
