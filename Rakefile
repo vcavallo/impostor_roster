@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 ImpostorRoster::Application.load_tasks
+
+require 'rake-version'
+RakeVersion::Tasks.new
