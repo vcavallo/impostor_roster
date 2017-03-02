@@ -19,7 +19,7 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
-## [UNRELEASED]
+## [0.4.0]
 
 ### Added
 

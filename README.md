@@ -6,8 +6,8 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
 
 ## Todo
 
-- Pagination or some kind of separation of topics or something. Not too much
-  though. I sort of like it being a big weird list. Perhaps infinite scroll.
+- ~Pagination or some kind of separation of topics or something. Not too much
+  though. I sort of like it being a big weird list. Perhaps infinite scroll.~ jsownz submitted this.
 - Allow users to enter Days, Months, Years or any combination in the form;
   display the same intelligently on the view.
 - Category auto-complete from existing categories in form
