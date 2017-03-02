@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [UNRELEASED]
+
+### Added
+
+- reCAPTCHA on post form
+
 ## [0.2.0]
 
 ### Added

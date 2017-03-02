@@ -18,7 +18,7 @@ class PostsController < ApplicationController
       category: category
     )
 
-    if @post.save
+    if verify_recaptcha(model: @post) && @post.save
       @posts = Post.all
       flash.now[:success] = "Your post has been created!"
       render "index"
