@@ -27,6 +27,7 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
 
 ## Initializing
 
+- Until I skip recaptcha on develop, you'll need to get a reCAPTCHA account and add `localhost` to the list of domains in the account. (https://www.google.com/recaptcha). Get the keys from there for the step below.
 - This app uses [dotenv](https://github.com/bkeepers/dotenv) to manage secrets.
   You'll need to create a `.env` file at the project root and define a secret
   key there (`rake secret` is your friend) like this:
@@ -35,6 +36,8 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
 #.env living at application root
 
 export SECRET_KEY_BASE=f0461bSOME_LONG_KEY_HERE
+export RECAPTCHA_SITE_KEY=thignsthigns
+export RECAPTCHA_SECRET_KEY=thingsthings
 ```
 
 - Pretty sure everything else is standard rails. clone, `bundle`, `rake db:setup` (there are some seeds).
