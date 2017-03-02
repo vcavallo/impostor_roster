@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.3.1]
+
+### Fixed
+
+- Category and Post validations now disallow all but letters, numbers and spaces
+
 ## [0.3.0]
 
 ### Added
