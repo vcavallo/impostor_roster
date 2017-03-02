@@ -19,6 +19,16 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [UNRELEASED]
+
+### Added
+
+- Pagination for 30 records on index
+
+### Changed
+
+- Order posts by id desc
+
 ## [0.3.2]
 
 ### Fixed
