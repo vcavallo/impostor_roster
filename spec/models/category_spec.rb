@@ -28,6 +28,13 @@ describe Category do
           expect(category).to be_invalid
         end
       end
+
+      context "when it has punction" do
+        it "is invalid" do
+          category.name = "'DROP TABLE='"
+          expect(category).to be_invalid
+        end
+      end
     end
   end
 

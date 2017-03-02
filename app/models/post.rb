@@ -10,4 +10,5 @@ class Post < ActiveRecord::Base
 
   validates :inability, presence: true
   validates :inability, :length => { minimum: 1 }
+  validates :inability, :format => { with: /\A[a-zA-Z0-9]*\z/, message: "Only letters and numbers allowed for inability field" }
 end

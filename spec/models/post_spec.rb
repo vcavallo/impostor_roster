@@ -62,6 +62,13 @@ describe Post do
           expect(post).to be_invalid
         end
       end
+
+      context "when it has punction" do
+        it "is invalid" do
+          post.inability = "'DROP TABLE='"
+          expect(post).to be_invalid
+        end
+      end
     end
   end
 
