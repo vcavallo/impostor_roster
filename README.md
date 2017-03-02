@@ -38,3 +38,13 @@ export SECRET_KEY_BASE=f0461bSOME_LONG_KEY_HERE
 ```
 
 - Pretty sure everything else is standard rails. clone, `bundle`, `rake db:setup` (there are some seeds).
+
+## Contributing
+
+I keep a CHANGELOG.md file and (attempt to) adhere to semver, if for no other reason than these things keep me alert. I'm using `rake-version` to maintain the `VERSION` file and I update the changelog manually as feature branches are merged, more or less. If you're contributing, all that is mostly irrelevant to you, but the branching stuff might matter:
+
+- keep your changes in feature branches created off `develop` and named like so: `feature-[SOME-THING-OR-OTHER]`.
+- try to update the changelog with your changes, if you'd be so kind.
+
+Easy. Those are eventually merged back into `develop` until it's time to open up a release branch - which is where the version bumps and any other last-minute fixes are made - which is then merged into `master` and back into `develop`.  
+All this doesn't really matter to you, though. Just open feature branches off of `develop` :)
