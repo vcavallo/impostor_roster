@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all.shuffle
+    params[:page] ||= 1
+    # @posts = Post.all.shuffle
+    @posts = Post.paginate(page: params[:page], per_page: 30)
+                 .order(id: :desc)
   end
 
   def new
