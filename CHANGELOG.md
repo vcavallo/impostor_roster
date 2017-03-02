@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.3.2]
+
+### Fixed
+
+- Post now validates that it belongs to a Category.
+
 ## [0.3.1]
 
 ### Fixed
