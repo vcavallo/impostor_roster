@@ -19,7 +19,14 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
-## [UNRELEASED]
+## [0.4.1]
+
+### Changed
+
+- Added heroku-deflate for assets
+- Load JS with async
+
+## [0.4.0]
 
 ### Added
 
