@@ -56,6 +56,13 @@ describe Post do
         end
       end
 
+      context "when it has spaces" do
+        it "is valid" do
+          post.inability = "C C C"
+          expect(post).to be_valid
+        end
+      end
+
       context "when it is blank" do
         it "is invalid" do
           post.inability = nil

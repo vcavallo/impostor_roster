@@ -22,6 +22,13 @@ describe Category do
         end
       end
 
+      context "when it has spaces" do
+        it "is valid" do
+          category.name = "C C C"
+          expect(category).to be_valid
+        end
+      end
+
       context "when it is blank" do
         it "is invalid" do
           category.name = nil
