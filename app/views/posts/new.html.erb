@@ -6,21 +6,22 @@
     <%= form_tag '/posts' do %>
       <div class="form-group">
         <%= label_tag "Field you are in:" %>
-        <%= text_field_tag 'post[category]', @field, class: "form-control", placeholder: 'Programming' %>
+        <%= text_field_tag 'post[category]', @field, class: "form-control", placeholder: 'Your industry or topic for this confession' %>
       </div>
       <div class="form-group">
         <%= label_tag "Months of Experience:" %>
         <%= text_field_tag 'post[months_experience]', nil, class: "form-control", placeholder: '120' %>
       </div>
       <div class="form-group">
-        <%= label_tag "Thing you are bad at:" %>
-        <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'whiteboard interviews' %>
+        <%= label_tag "Confession:" %>
+        <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'Remember which \'their\' is correct' %>
+        <span class="hint">I still can't...</span>
       </div>
       <div class="form-group">
         <%= recaptcha_tags %>
       </div>
       <h4>You should probably check your spelling.<br/> Once you hit this button your post will be live and you can't edit it afterwards.</h4>
-        <%= button_tag "Admit it!", class: "btn btn-primary" %>
+        <%= submit_tag "Admit it!", class: "btn btn-primary" %>
     <% end %>
   </div>
 

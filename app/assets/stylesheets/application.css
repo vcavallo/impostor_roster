@@ -15,3 +15,14 @@
 .new-submission nav {
   margin-top: 1em;
 }
+
+.new-submission span.hint {
+  position: relative;
+  bottom: 27px;
+  left: 13px;
+  color: grey;
+}
+
+.new-submission input[name='post[inability]'] {
+  padding-left: 90px;
+}
