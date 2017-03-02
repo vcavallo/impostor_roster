@@ -19,6 +19,16 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [UNRELEASED]
+
+### Added
+
+- Confirm prompt to fix post before submitting
+
+### Changed
+
+- Random submission placeholders for 'inability' input
+
 ## [0.2.1]
 
 ### Added
