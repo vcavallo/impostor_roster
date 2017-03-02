@@ -42,6 +42,7 @@ group :doc do
 end
 
 group :production, :staging do
+  gem 'heroku-deflater'
   gem 'pg'
   gem 'rails_12factor'
 end
