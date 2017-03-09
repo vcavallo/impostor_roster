@@ -25,6 +25,11 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 - Redirect after creating a post now doesn't break
 
+### Changed
+
+- Added heroku-deflate for assets
+- Load JS with async
+
 ## [0.4.0]
 
 ### Added
