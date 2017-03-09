@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.4.2]
+
+### Fixed
+
+- UNCOMMENT captcha check :\
+
 ## [0.4.1]
 
 ### Fixed
