@@ -21,10 +21,11 @@ class PostsController < ApplicationController
       category: category
     )
 
-    if verify_recaptcha(model: @post) && @post.save
+    #if verify_recaptcha(model: @post) && @post.save
+    if @post.save
       @posts = Post.all
       flash.now[:success] = "Your post has been created!"
-      render "index"
+      redirect_to posts_path
     else
       flash.now[:danger] = @post.errors.full_messages.to_sentence
       render 'new'

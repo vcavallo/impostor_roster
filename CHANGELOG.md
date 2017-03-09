@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.4.1]
+
+### Fixed
+
+- Redirect after creating a post now doesn't break
+
 ## [0.4.0]
 
 ### Added
