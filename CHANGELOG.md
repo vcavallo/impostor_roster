@@ -19,6 +19,19 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.9.0]
+
+### Changed
+
+- Upgrade to Rails 4.2.10
+- `category` resource is now plural
+- skip recaptcha in dev/test envs
+
+### Added
+
+- Feature specs for critical paths
+- Spring
+
 ## [0.8.0]
 
 ### Added
