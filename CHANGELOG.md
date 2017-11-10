@@ -19,11 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
-## [UNRELEASED]
+## [1.0.0]
 
 ### Added
 
 - `administrate` admin
+- `goofy` tag to posts
 
 ### Changed
 
