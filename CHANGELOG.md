@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.9.1]
+
+### Fixed
+
+- Changed cookie serializer to hybrid
+
 ## [0.9.0]
 
 ### Changed
