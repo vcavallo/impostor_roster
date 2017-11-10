@@ -64,6 +64,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry'
   gem 'guard-livereload'
+  gem 'spring'
 end
 
 # Use ActiveModel has_secure_password
