@@ -2,7 +2,7 @@
 
 <ul>
 <% @category_posts.each do |post| %>
-  <li>
+  <li class="<%= 'goofy' if post.goofy? %>">
     <%= link_to post.inability, post_path(post) %>, <%= post.months_experience %> months later.
     <span class="comment-indicator">
       <a href="<%= post_path(post) %>#disqus_thread" class="fa fa-comment"></a>
