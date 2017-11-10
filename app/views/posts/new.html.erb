@@ -17,9 +17,11 @@
         <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'Remember which \'their\' is correct' %>
         <span class="hint">I still can't...</span>
       </div>
-      <div class="form-group">
-        <%= recaptcha_tags %>
-      </div>
+      <% if Rails.env.staging? || Rails.env.production? %>
+        <div class="form-group">
+          <%= recaptcha_tags %>
+        </div>
+      <% end %>
       <h4>You should probably check your spelling above.</h4>
         <%= submit_tag "Admit it!", class: "btn btn-primary" %>
     <% end %>

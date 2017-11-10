@@ -25,7 +25,7 @@ class PostsController < ApplicationController
       category: category
     )
 
-    if verify_recaptcha(model: @post) && @post.save
+    if captcha_if_needed && @post.save
       @posts = Post.all
       flash.now[:success] = "Your post has been created!"
       redirect_to posts_path
@@ -36,6 +36,15 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def captcha_if_needed
+    if Rails.env.staging? || Rails.env.production?
+      verify_recaptcha(model: @post)
+    else
+      true
+    end
+  end
+
   def post_params
     params.require(:post).permit(
       :category,
