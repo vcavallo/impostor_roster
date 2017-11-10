@@ -5,7 +5,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1'
+gem 'rails', '4.2'
 gem 'rake-version', '~> 1.0'
 
 # Use SCSS for stylesheets
@@ -49,7 +49,7 @@ group :production, :staging do
 end
 
 group :test, :development do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'capybara'
 end
 
@@ -60,11 +60,13 @@ group :test do
 end
 
 group :development do
+  gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry'
   gem 'guard-livereload'
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 # Use ActiveModel has_secure_password
