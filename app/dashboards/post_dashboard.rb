@@ -15,6 +15,7 @@ class PostDashboard < Administrate::BaseDashboard
     months_experience: Field::Number,
     inability: Field::String,
     slug: Field::String,
+    goofy: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -39,6 +40,7 @@ class PostDashboard < Administrate::BaseDashboard
     :months_experience,
     :inability,
     :slug,
+    :goofy,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -49,6 +51,7 @@ class PostDashboard < Administrate::BaseDashboard
     :months_experience,
     :inability,
     :slug,
+    :goofy,
   ].freeze
 
   # Overwrite this method to customize how posts are displayed
