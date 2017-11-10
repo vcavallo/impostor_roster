@@ -5,7 +5,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2'
+gem 'rails', '~> 4.2'
 gem 'rake-version', '~> 1.0'
 
 # Use SCSS for stylesheets
