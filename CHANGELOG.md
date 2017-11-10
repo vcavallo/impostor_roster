@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.8.0]
+
+### Added
+
+- Disqus comment count in post index and category show
+
 ## [0.7.0]
 
 ### Added
