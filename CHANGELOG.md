@@ -19,6 +19,16 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [UNRELEASED]
+
+### Added
+
+- `administrate` admin
+
+### Changed
+
+- Pagination is now handled by `kaminari` instead of `will_paginate` since the two don't play well together and Administrate uses the former.
+
 ## [0.9.1]
 
 ### Fixed

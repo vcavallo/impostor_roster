@@ -8,5 +8,4 @@ class CategoriesController < ApplicationController
     @category = Category.friendly.find(params[:id])
     @category_posts = Post.where(category_id: @category.id)
   end
-
 end
