@@ -17,6 +17,6 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: impostor_roster
+  database: impostor_roster_test
   pool: 5
   timeout: 5000

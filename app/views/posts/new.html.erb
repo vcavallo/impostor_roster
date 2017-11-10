@@ -12,11 +12,19 @@
         <%= label_tag "Months of Experience:" %>
         <%= text_field_tag 'post[months_experience]', nil, class: "form-control", placeholder: '120' %>
       </div>
+
       <div class="form-group">
         <%= label_tag "Confession:" %>
         <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'Remember which \'their\' is correct' %>
         <span class="hint">I still can't...</span>
       </div>
+
+      <div class="form-group">
+        <%= label_tag 'post[goofy]', "This is a goofy post" %>
+        <%= check_box_tag 'post[goofy]', true, false, class: "form-control" %>
+        <p style="max-width: 400px;">Please check this box if your post is not a serious confession. We enjoy the comedic directions some users have taken, but we also want to keep the content useful to those truly interested.</p>
+      </div>
+
       <% if Rails.env.staging? || Rails.env.production? %>
         <div class="form-group">
           <%= recaptcha_tags %>

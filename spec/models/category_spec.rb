@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe Category do
 
@@ -50,9 +51,10 @@ describe Category do
   end
 
   describe "associations" do
-    let(:post) { FactoryGirl.create(:ruby_post) }
+
     it "has many posts" do
-      expect(category.posts).to include(post)
+      post = FactoryGirl.create(:ruby_post, category: category)
+      expect(category.posts).not_to be_empty
     end
   end
 

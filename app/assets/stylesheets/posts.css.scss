@@ -11,3 +11,10 @@
   opacity: 0.2;
   margin-left: 5px;
 }
+
+.goofy {
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}

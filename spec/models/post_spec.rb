@@ -10,6 +10,13 @@ describe Post do
     end
   end
 
+  describe "has #goofy?" do
+    it { should respond_to(:goofy) }
+
+    it "defaults to false" do
+      expect(post.goofy?).to be_falsey
+    end
+  end
 
   describe "has #months_experience" do
     it { should respond_to(:months_experience) }
@@ -80,10 +87,8 @@ describe Post do
   end
 
   describe "associations" do
-    let!(:category) { FactoryGirl.create(:ruby_category) }
-
     it "belongs to a category" do
-      expect(post.category).to eq(category)
+      expect(post.category).not_to be_nil
     end
   end
 

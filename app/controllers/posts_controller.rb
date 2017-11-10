@@ -20,7 +20,8 @@ class PostsController < ApplicationController
     @post = Post.new(
       inability: post_params[:inability].downcase,
       months_experience: post_params[:months_experience].to_i,
-      category: category
+      category: category,
+      goofy: post_params[:goofy],
     )
 
     if captcha_if_needed && @post.save
@@ -48,7 +49,8 @@ class PostsController < ApplicationController
       :category,
       :months_experience,
       :inability,
-      :field
+      :field,
+      :goofy,
     )
   end
 end
