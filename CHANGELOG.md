@@ -19,6 +19,17 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.6.0]
+
+### Added
+
+- Disqus
+- Post show page for comments
+
+### Changed
+
+- Add friendly id slugs to Post
+
 ## [0.5.0]
 
 ### Added
