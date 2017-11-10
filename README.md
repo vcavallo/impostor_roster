@@ -16,7 +16,7 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
   for the same topic. Perhaps add your own length of experience and somehow
     show this (maybe as a total of all 'me toos' years of experience for the
     topic.). Would have to have a rough way to prevent spamming this.
-- Profanity filter?
+~- Profanity filter?~
 - Inappropriateness flagging?
 - Non-bootstrap styling!
 - Go through and get everything closer to Rails conventions (including things
@@ -27,7 +27,7 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
 
 ## Initializing
 
-- Until I skip recaptcha on develop, you'll need to get a reCAPTCHA account and add `localhost` to the list of domains in the account. (https://www.google.com/recaptcha). Get the keys from there for the step below.
+~- Until I skip recaptcha on develop, you'll need to get a reCAPTCHA account and add `localhost` to the list of domains in the account. (https://www.google.com/recaptcha). Get the keys from there for the step below.~
 - This app uses [dotenv](https://github.com/bkeepers/dotenv) to manage secrets.
   You'll need to create a `.env` file at the project root and define a secret
   key there (`rake secret` is your friend) like this:
@@ -38,9 +38,16 @@ For now, here's a non-exhaustive list of stuff I'd like to do:
 export SECRET_KEY_BASE=f0461bSOME_LONG_KEY_HERE
 export RECAPTCHA_SITE_KEY=thignsthigns
 export RECAPTCHA_SECRET_KEY=thingsthings
+export ADMIN_NAME=somenameforhttpbasicauth
+export ADMIN_PASSWORD=somepasswordforhttpbasicauth
 ```
 
 - Pretty sure everything else is standard rails. clone, `bundle`, `rake db:setup` (there are some seeds).
+
+## Things to know
+
+- The admin section is handled by `Administrate`
+  - Auth for this is just http basic auth for now. user and pass in the env
 
 ## Contributing
 
