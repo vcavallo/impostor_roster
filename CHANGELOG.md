@@ -19,6 +19,12 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.7.0]
+
+### Added
+
+- Profanity filter... This is what the internet does
+
 ## [0.6.0]
 
 ### Added
