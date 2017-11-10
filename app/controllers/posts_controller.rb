@@ -12,6 +12,10 @@ class PostsController < ApplicationController
     @field = params[:category] if params[:category]
   end
 
+  def show
+    @post = Post.friendly.find(params[:id])
+  end
+
   def create
     category = Category.find_or_initialize_by(name: post_params[:category].downcase)
 

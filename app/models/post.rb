@@ -2,6 +2,9 @@ class Post < ActiveRecord::Base
   belongs_to :category
   validates_associated :category
 
+  extend FriendlyId
+  friendly_id :inability, use: :slugged
+
  # validates :field, presence: true
  # validates :field, :length => { minimum:  3 }
 

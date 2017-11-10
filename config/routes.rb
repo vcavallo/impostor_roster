@@ -12,6 +12,7 @@ ImpostorRoster::Application.routes.draw do
   get 'posts' => 'posts#index', :as => :posts
   get 'posts/new' => 'posts#new', :as => :new_post
   post 'posts' => 'posts#create'
+  get 'post/:id' => 'posts#show', :as => :post
   get 'about' => 'pages#about', :as => :about
   get 'categories' => 'category#index'
   get 'category/:id' => 'category#show', :as => :category
