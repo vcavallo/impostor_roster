@@ -19,6 +19,13 @@ _Security_ to invite users to upgrade in case of vulnerabilities.
 
 -----
 
+## [0.5.0]
+
+### Added
+
+- Twitter account for impostor roster!
+- `.ruby-version`
+
 ## [0.4.2]
 
 ### Fixed
