@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', groups: [:development, :test] 
+gem 'dotenv-rails', groups: [:development, :test]
 
 ruby '2.3.1'
 
@@ -34,7 +34,6 @@ gem 'twitter-bootstrap-rails'
 
 gem 'friendly_id', '~> 5.0.0'
 gem "recaptcha", require: "recaptcha/rails"
-#gem 'will_paginate'
 gem 'kaminari'
 gem 'obscenity'
 gem 'administrate', github: 'thoughtbot/administrate', branch: :master

@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   def index
-    params[:page] ||= 1
     @posts = Post.page(params[:page]).per(30).order(id: :desc)
   end
 
