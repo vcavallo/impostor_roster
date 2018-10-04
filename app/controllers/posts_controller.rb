@@ -25,12 +25,10 @@ class PostsController < ApplicationController
     )
 
     if captcha_if_needed && @post.save
-      @posts = Post.all
-      flash.now[:success] = "Your post has been created!"
-      redirect_to posts_path
+      redirect_to posts_path, flash: { success: 'Your post has been created!' }
     else
       flash.now[:danger] = @post.errors.full_messages.to_sentence
-      render 'new'
+      render :new
     end
   end
 

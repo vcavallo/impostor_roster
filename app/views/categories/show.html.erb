@@ -1,14 +1,14 @@
 <h3>Some things that other people involved in <%= @category.name.titleize %> felt shaky about:</h3>
 
 <ul>
-<% @category_posts.each do |post| %>
-  <li class="<%= 'goofy' if post.goofy? %>">
-    <%= link_to post.inability, post_path(post) %>, <%= post.months_experience %> months later.
-    <span class="comment-indicator">
-      <a href="<%= post_path(post) %>#disqus_thread" class="fa fa-comment"></a>
-    </span>
-  </li>
-<% end %>
+  <% @category.posts.each do |post| %>
+    <li class="<%= 'goofy' if post.goofy? %>">
+        <%= link_to post.inability, post_path(post) %>, <%= post.months_experience %> months later.
+      <span class="comment-indicator">
+        <a href="<%= post_path(post) %>#disqus_thread" class="fa fa-comment"></a>
+      </span>
+    </li>
+  <% end %>
 </ul>
 <p>Do you have issues with <%= @category.name.titleize %>? <%= link_to "Tell the world about it", new_post_path(category: @category.name)  %>!</p>
 <p><%= link_to "View all Categories", categories_path %></br>

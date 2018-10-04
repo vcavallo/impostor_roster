@@ -7,6 +7,7 @@ ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2'
 gem 'rake-version', '~> 1.0'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -46,12 +47,10 @@ end
 
 group :production, :staging do
   gem 'heroku-deflater'
-  gem 'pg'
   gem 'rails_12factor'
 end
 
 group :test, :development do
-  gem 'pg'
   gem 'capybara'
 end
 
