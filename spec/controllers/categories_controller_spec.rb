@@ -10,12 +10,12 @@ RSpec.describe CategoriesController, type: :controller do
 
   describe '#show' do
     let(:category) { create(:ruby_category) }
-    let(:post) { create(:ruby_post, category: category) }
+    let!(:post) { create(:ruby_post, category: category) }
 
     it 'renders show with category and posts' do
       get :show, id: category.id
       expect(assigns(:category)).to eq category
-      expect(assigns(:category_posts)).to eq [post]
+      expect(assigns(:category).posts).to eq [post]
       expect(response).to render_template(:show)
     end
   end
