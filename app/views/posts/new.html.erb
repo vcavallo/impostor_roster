@@ -3,26 +3,21 @@
   <h3>Help us feel better by contributing:</h3>
 
   <div>
-    <%= form_tag '/posts' do %>
+    <%= form_for @post do |f| %>
       <div class="form-group">
-        <%= label_tag "Field you are in:" %>
-        <%= text_field_tag 'post[category]', @field, class: "form-control", placeholder: 'Your industry or topic for this confession' %>
-      </div>
-      <div class="form-group">
-        <%= label_tag "Months of Experience:" %>
-        <%= text_field_tag 'post[months_experience]', nil, class: "form-control", placeholder: '120' %>
+        <%= f.label 'Field you are in:' %>
+        <%= f.text_field :category, class: "form-control", placeholder: 'Your industry or topic for this confession', value: @post.category.try(:name) %>
       </div>
 
       <div class="form-group">
-        <%= label_tag "Confession:" %>
-        <%= text_field_tag 'post[inability]', nil, class: "form-control", placeholder: 'Remember which \'their\' is correct' %>
+        <%= f.label 'Months of Experience' %>
+        <%= f.text_field :months_experience, class: 'form-control', placeholder: '120' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label_tag 'Confession:' %>
+        <%= f.text_field :inability, class: "form-control", placeholder: 'Remember which \'their\' is correct' %>
         <span class="hint">I still can't...</span>
-      </div>
-
-      <div class="form-group">
-        <%= label_tag 'post[goofy]', "This is a goofy post" %>
-        <%= check_box_tag 'post[goofy]', true, false, class: "form-control" %>
-        <p style="max-width: 400px;">Please check this box if your post is not a serious confession. We enjoy the comedic directions some users have taken, but we also want to keep the content useful to those truly interested.</p>
       </div>
 
       <% if Rails.env.staging? || Rails.env.production? %>
@@ -31,7 +26,7 @@
         </div>
       <% end %>
       <h4>You should probably check your spelling above.</h4>
-        <%= submit_tag "Admit it!", class: "btn btn-primary" %>
+      <%= f.submit "Admit it!", class: "btn btn-primary" %>
     <% end %>
   </div>
 

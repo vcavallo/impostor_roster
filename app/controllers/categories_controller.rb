@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.friendly.find(params[:id])
-    @category_posts = Post.where(category_id: @category.id)
+    @category = Category.includes(:posts).friendly.find(params[:id])
   end
 end
